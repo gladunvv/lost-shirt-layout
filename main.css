@@ -164,6 +164,10 @@ ul > li {
   background-color: var(--black);
 }
 
+.products {
+  margin-bottom: 160px;
+}
+
 .products__list {
   display: flex;
   flex-wrap: wrap;
@@ -272,4 +276,81 @@ ul > li {
 .btn:hover {
   background: var(--red);
   color: #fff;
+}
+
+.collections {
+  margin-bottom: 135px;
+}
+
+.collections__list {
+  display: flex;
+}
+
+.collections__item {
+  min-height: 470px;
+  flex: 1;
+  overflow: hidden;
+  margin-right: 30px;
+  background: url("./img/bg/pattern.png") center center / 500px;
+  position: relative;
+}
+
+
+.collections__item::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 177%;
+  width: 60%;
+  top: -17%;
+  left: -87px;
+  background: center center / contain no-repeat;
+}
+
+
+.collections__item--type-guys:before {
+  background-image: url('./img/collections/collection_man.png');
+}
+
+.collections__item--type-girls:before {
+  background-image: url('./img/collections/collection_woman.png');
+  top: -129px;
+  width: 80%;
+  left: -21%;
+}
+
+.collections__link {
+  display: block;
+  padding: 74px 13% 74px 44%;
+  text-decoration: none;
+  color: inherit;
+  font-size: 15px;
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+
+.collections__link:hover .btn {
+  background: var(--red);
+  color: #fff;
+}
+
+
+.collections__title {
+  font-family: var(--titlesFont);
+  font-size: 70px;
+  font-weight: bold;
+  line-height: 1;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 11px;
+}
+
+.collections__item:last-child {
+  margin-right: 0px;
+}
+
+.collections__desc {
+  margin-bottom: 28px;
 }
