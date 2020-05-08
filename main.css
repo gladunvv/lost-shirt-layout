@@ -179,8 +179,16 @@ ul > li {
   height: 386px;
   background: var(--yellow);
   margin-bottom: 35px;
-  margin-left: 27px;
+  margin-left: 30px;
   position: relative;
+}
+
+.products__item:first-child {
+  margin-left: 0px;
+}
+
+.products__item:nth-child(4) {
+  margin-left: 0px;
 }
 
 .products__price {
@@ -266,7 +274,7 @@ ul > li {
   text-transform: uppercase;
   font-family: var(--titlesFont);
   font-size: 24px;
-  padding: 2px 30px;
+  padding: 2px 10px;
   background: var(--black);
   color: var(--yellow);
   display: inline-block;
@@ -295,7 +303,6 @@ ul > li {
   position: relative;
 }
 
-
 .collections__item::before {
   content: "";
   display: block;
@@ -307,13 +314,12 @@ ul > li {
   background: center center / contain no-repeat;
 }
 
-
 .collections__item--type-guys:before {
-  background-image: url('./img/collections/collection_man.png');
+  background-image: url("./img/collections/collection_man.png");
 }
 
 .collections__item--type-girls:before {
-  background-image: url('./img/collections/collection_woman.png');
+  background-image: url("./img/collections/collection_woman.png");
   top: -129px;
   width: 80%;
   left: -21%;
@@ -330,12 +336,10 @@ ul > li {
   box-sizing: border-box;
 }
 
-
 .collections__link:hover .btn {
   background: var(--red);
   color: #fff;
 }
-
 
 .collections__title {
   font-family: var(--titlesFont);
@@ -353,4 +357,66 @@ ul > li {
 
 .collections__desc {
   margin-bottom: 28px;
+}
+
+.collections__btn {
+  margin-top: 15px;
+  padding-top: 4px;
+}
+
+.footer {
+  margin-bottom: 115px;
+}
+
+.footer__container {
+  width: 1105px;
+}
+
+.site-menu__sections {
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-menu__col {
+  margin-right: 20px;
+}
+
+.site-menu__col:last-child {
+  margin-right: 0;
+}
+
+.site-menu__item {
+  margin-bottom: 15px;
+}
+
+.site-menu__title {
+  font-family: var(--titlesFont);
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--black);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.site-menu__link {
+  color: #737373;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.site-menu__link:hover {
+  color: var(--red);
+}
+
+.site-menu__text {
+  font-size: 15px;
+  color: var(--black);
+  margin-bottom: 30px;
+}
+
+.site-menu__text-row {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 5px;
 }
