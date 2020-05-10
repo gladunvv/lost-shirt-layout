@@ -1,7 +1,7 @@
 @font-face {
-  font-family: "alegreya";
-  src: url("./fonts/alegreyasanssc-black-webfont.woff2") format("woff2"),
-    url("./fonts/alegreyasanssc-black-webfont.woff") format("woff");
+  font-family: 'alegreya';
+  src: url('./fonts/alegreyasanssc-black-webfont.woff2') format('woff2'),
+    url('./fonts/alegreyasanssc-black-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -10,7 +10,7 @@
   --yellow: #ffc92f;
   --red: #d82727;
   --black: #1b1b1b;
-  --titlesFont: "Yanone Kaffeesatz", Arial, sans-serif;
+  --titlesFont: 'Yanone Kaffeesatz', Arial, sans-serif;
 }
 
 html,
@@ -29,7 +29,7 @@ body {
 }
 
 body {
-  font: 16px / 1.42em "Roboto", Arial, sans-serif;
+  font: 16px / 1.42em 'Roboto', Arial, sans-serif;
   color: #212121;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -48,7 +48,7 @@ ul > li {
 .hero {
   height: 100vh;
   min-height: 650px;
-  background: url("./img/bg/hero.jpg") center center / cover no-repeat;
+  background: url('./img/bg/hero.jpg') center center / cover no-repeat;
   position: relative;
   margin-bottom: 130px;
 }
@@ -99,11 +99,13 @@ ul > li {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  transition: width 0.3s;
 }
 
 .sidebar__menu {
   position: absolute;
   left: -400px;
+  transition: left 0.3s;
 }
 
 .sidebar__hamburger-icon {
@@ -128,6 +130,7 @@ ul > li {
   left: 0;
   width: 100%;
   text-align: center;
+  transition-delay: 0.1s;
 }
 
 .sidebar--opened {
@@ -179,16 +182,39 @@ ul > li {
 .fade-slider {
   height: 100%;
   width: 100%;
+  position: relative;
 }
 
 .fade-slider__item {
-  background: url("./img/content/hero/slider_pic_1.png") center center / contain
-    no-repeat;
+  background: center center / contain no-repeat;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity .4s;
+}
+
+.fade-slider__item--visible {
+  opacity: 1;
+}
+
+.fade-slider__item--style-thirts {
+  background-image: url('./img/content/hero/slider_pic_1.png');
+}
+
+.fade-slider__item--style-games {
+  background-image: url('./img/content/hero/slider_pic_2.png');
+}
+
+.fade-slider__item--style-presents {
+  background-image: url('./img/content/hero/slider_pic_3.png ');
 }
 
 .lined-text {
-  font-family: "alegreya", Arial, sans-serif;
+  font-family: 'alegreya', Arial, sans-serif;
   color: #fff;
   font-size: 63px;
   text-transform: uppercase;
@@ -198,11 +224,27 @@ ul > li {
   align-items: flex-start;
 }
 
-.fade-slider__text {
+.fade-slider__item--style-thirts .fade-slider__text {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-164%, -52%);
+}
+
+.fade-slider__item--style-games .fade-slider__text {
+  white-space: nowrap;
+  position: absolute;
+  left: 130%;
+  top: 89%;
+  transform: translate(-175%, -52%);
+}
+
+.fade-slider__item--style-presents .fade-slider__text {
+  white-space: nowrap;
+  position: absolute;
+  left: 63%;
+  top: 79%;
+  transform: translate(-175%, -52%);
 }
 
 .lined-text__word {
@@ -215,7 +257,24 @@ ul > li {
   color: var(--yellow);
 }
 
-.lined-text__word:nth-child(2n) {
+.fade-slider__item--style-presents .lined-text__word--color-yellow {
+  font-size: 49px;
+}
+
+.fade-slider__item--style-presents .lined-text {
+  transform: rotate(1.2deg);
+}
+
+.fade-slider__item--style-games .lined-text {
+  align-items: center;
+  font-size: 59px;
+}
+
+.fade-slider__item--style-presents .lined-text__word:nth-child(2n) {
+  margin-left: -20px;
+}
+
+.fade-slider__item--style-thirts .lined-text__word:nth-child(2n) {
   margin-left: 8px;
 }
 
@@ -269,17 +328,17 @@ ul > li {
   height: 386px;
   background: var(--yellow);
   margin-bottom: 35px;
-  margin-left: 30px;
+  margin-left: 35px;
   position: relative;
 }
 
-.products__item:first-child {
+/* .products__item:first-child {
   margin-left: 0px;
 }
 
 .products__item:nth-child(4) {
   margin-left: 0px;
-}
+} */
 
 .products__price {
   position: absolute;
@@ -389,12 +448,12 @@ ul > li {
   flex: 1;
   overflow: hidden;
   margin-right: 30px;
-  background: url("./img/bg/pattern.png") center center / 500px;
+  background: url('./img/bg/pattern.png') center center / 500px;
   position: relative;
 }
 
 .collections__item::before {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   height: 177%;
@@ -405,11 +464,11 @@ ul > li {
 }
 
 .collections__item--type-guys:before {
-  background-image: url("./img/collections/collection_man.png");
+  background-image: url('./img/collections/collection_man.png');
 }
 
 .collections__item--type-girls:before {
-  background-image: url("./img/collections/collection_woman.png");
+  background-image: url('./img/collections/collection_woman.png');
   top: -129px;
   width: 80%;
   left: -21%;
@@ -546,7 +605,7 @@ ul > li {
 
 .extras__col-socials {
   height: 100%;
-  background: url("./img/bg/pattern.png") center center / 500px;
+  background: url('./img/bg/pattern.png') center center / 500px;
   display: flex;
   align-items: center;
   justify-content: center;
