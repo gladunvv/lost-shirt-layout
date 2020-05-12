@@ -695,6 +695,7 @@ ul > li {
   align-items: center;
   justify-content: center;
   opacity: 0;
+  transition: opacity 0.4s;
 }
 
 .detail-photo--visible {
@@ -963,6 +964,7 @@ ul > li {
   box-sizing: border-box;
   background: var(--yellow);
   padding: 10px;
+  transition: opacity 0.4s;
 }
 
 .information-card {
