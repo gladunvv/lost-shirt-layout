@@ -85,7 +85,7 @@ ul > li {
 
 .header-product__text--small {
   font-size: 30px !important;
-  transform: translate(-39%, 24%);
+  transform: translate(-40%, 24%) rotate(1deg);
   position: absolute;
 }
 
@@ -458,11 +458,12 @@ ul > li {
   text-transform: uppercase;
   font-family: var(--titlesFont);
   font-size: 24px;
-  padding: 2px 10px;
+  padding: 4px 10px 2px 10px;
   background: var(--black);
   color: var(--yellow);
   display: inline-block;
   text-decoration: none;
+
 }
 
 .btn:hover {
@@ -794,6 +795,7 @@ ul > li {
 
 .clicks-size .size-not {
   color: #cac3b3;
+  cursor: default;
 }
 
 .clicks-size .size-active {
